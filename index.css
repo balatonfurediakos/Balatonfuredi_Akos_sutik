@@ -3,6 +3,11 @@
     src: url("kepek/Schoolbell-Regular.ttf");
 }
 
+:root {
+    --vilagos: #feda70;
+    --sotet: #8d5b1a;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -31,16 +36,18 @@ main {
 section {
     padding: 32px;
 }
-nav{
+
+nav {
     padding-top: 2rem;
     display: flex;
     gap: .5rem;
     width: fit-content;
     margin: auto;
 }
+
 nav>div {
-    color: #8d5b1a;
-    background-color: #feda70;
+    color: var(--sotet);
+    background-color: var(--vilagos);
     font-size: 20px;
     padding: .5rem;
     border-radius: 12px;
@@ -48,27 +55,54 @@ nav>div {
     width: fit-content;
 }
 
-h1{
+h1 {
     font-size: 28px;
     font-weight: 400;
 }
-h2{
+
+h2 {
     font-size: 56px;
     font-weight: 400;
 }
-p{
+
+p {
     font-size: 24px;
     max-width: 60ch;
     font-weight: 400;
 }
+
 article {
     height: fit-content;
     max-width: 1080px;
     margin: auto;
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
+
 article img {
-  width: 100%;
-  height: 550px;
-  object-fit: cover;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+.szines-szoveg {
+    color: var(--sotet);
+}
+
+table,
+footer {
+    max-width: 1080px;
+    margin: auto;
+}
+
+footer,
+thead,
+tbody tr:nth-child(even) {
+    background-color: var(--sotet);
+    color: var(--vilagos);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--vilagos);
+    color: var(--sotet);
 }
